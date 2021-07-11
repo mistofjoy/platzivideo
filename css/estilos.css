@@ -7,3 +7,20 @@
 html {
     font-size: 62.5%;
 }
+
+/*variables*/
+:root {
+    --header-color: #21C08B; 
+}
+
+/*flexbox en el body*/
+body {
+    display: flex;
+}
+
+/*header*/
+header {
+    background-color: var(--header-color);
+    height: 80px;
+    width: 100%;
+}
