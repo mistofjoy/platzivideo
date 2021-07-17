@@ -1,3 +1,9 @@
+/*Theme*/
+:root {
+    --header-color: #21C08B; 
+}
+
+/*Base*/
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -8,17 +14,11 @@ html {
     font-size: 62.5%;
 }
 
-/*variables*/
-:root {
-    --header-color: #21C08B; 
-}
-
-/*flexbox en el body*/
 body {
     display: flex;
 }
 
-/*header*/
+/*Header layout*/
 header {
     background-color: var(--header-color);
     height: 80px;
