@@ -27,17 +27,20 @@ body {
     height: 80px;
     width: 100%;
     display: flex;
+    justify-content: space-between;
 }
 
 .header__img--logo {
     width: 100%;
     height: 100%;
     margin: 0% 2%;
+    min-width: 81px;
 }
 
 /*Header - boton profile*/
 .header__menu {
     flex-grow: 1;
+    min-width: 95px;
 }
 
 .header__menu--profile {
