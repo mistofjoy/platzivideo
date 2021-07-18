@@ -73,6 +73,6 @@ body {
     color: var(--text-color);
     text-decoration: none;
 }
-.header__menu--list:active {
-    display: contents;
+.header__menu:hover ul {
+    display: block;
 }
