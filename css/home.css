@@ -1,9 +1,10 @@
 /*Theme*/
 :root {
-    --header-color: #AB88FF;
-    --basic-font-size: 16px; 
-    --profile-font-size: 15px;
+    --header-color: #8F57FD;
     --text-color: #FFFFFF;
+    --basic-font-size: 1.6rem; 
+    --profile-font-size: 1.5rem;
+    --title-font-size: 2.4rem;
 }
 
 /*Base*/
@@ -21,6 +22,7 @@ html {
 body {
     display: flex;
     background-color: var(--header-color);
+    flex-wrap: wrap;
 }
 
 /*Header - layout*/
@@ -82,4 +84,48 @@ body {
 
 .header__menu li:hover {
     text-decoration: underline;
+}
+
+/*Main - buscador*/
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.main__buscador {
+    width: 100%;
+}
+
+.main__buscador--label {
+    color: var(--text-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__buscador--label span {
+    font-size: var(--title-font-size);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.main__buscador--label input {
+    width: 70%;
+    margin: 10px 0%;
+    padding: 8px;
+    border-radius: 20px;
+    border: solid var(--text-color);
+    background-color: rgba(254,254,254,0.1);
+}
+
+.main__buscador--label input:focus {
+    outline: 0;
+}
+
+.main__buscador--label input::placeholder {
+    color: var(--text-color);
 }
