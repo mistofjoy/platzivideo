@@ -49,7 +49,7 @@ body {
 
 .header__menu--profile {
     display: flex;
-    height: 100%;
+    margin-top: 5px;
     margin-right: 5%;
     flex-direction: row;
     align-items: center;
@@ -78,7 +78,7 @@ body {
     text-decoration: none;
 }
 
-.header__menu:hover ul {
+.header__menu:hover ul, ul:hover {
     display: block;
 }
 
@@ -120,6 +120,7 @@ body {
     border-radius: 20px;
     border: solid var(--text-color);
     background-color: rgba(254,254,254,0.1);
+    color: var(--text-color);
 }
 
 .main__buscador--label input:focus {
@@ -128,4 +129,51 @@ body {
 
 .main__buscador--label input::placeholder {
     color: var(--text-color);
+}
+
+/*Carrousel*/
+.carrousel {
+    width: 100%;
+    margin: 5px 0%;
+}
+
+.carrousel > h1 {
+    font-size: var(--basic-font-size);
+    color: var(--text-color);
+    margin-left: 5%;
+    margin-bottom: 5px;
+}
+
+.carrousel__container {
+    display: relative;
+    white-space: nowrap;
+    margin: 0px 5%;
+    overflow: auto;
+    height: 420px;
+}
+
+.carrousel__container--item {
+    width: 200px;
+    height: 250px;
+    margin-right: 5%;
+    border-radius: 20px;
+    background-color: var(--text-color);
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    margin-top: 70px; 
+}
+
+.carrousel__container--item:hover ~ .carrousel__container--item {
+    transform: translate3d(100px, 0, 0);
+}
+
+.carrousel__container:hover .carrousel__container--item {
+    opacity: 0.5;
+}
+
+.carrousel__container:hover .carrousel__container--item:hover {
+    transform: scale(1.5);
+    opacity: 1;
 }
