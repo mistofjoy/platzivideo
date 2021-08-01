@@ -78,10 +78,54 @@ header img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .login__container--form > * {
     width: 80%;
+}
+
+.input {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--text-color);
+    border-left: 0;
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    outline: none;
+    height: 30px;
+    transition: 300ms all;
+    border-radius: 20px;
+}
+
+.input:focus {
+    background: rgba(254,254,254,0.2);
+}
+
+.input::placeholder {
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+}
+
+.login__container--form > input[type='submit'] {
+    background: rgba(254,254,254,0.3);
+    transition: 300ms all;
+    border: none;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: 40px;
+    font-size: var(--highlight-font-size);
+}
+
+.login__container--form > input[type='submit']:hover {
+    background:rgba(254,254,254,0.5);
 }
 
 /*login__container--remember*/
@@ -145,7 +189,8 @@ header img {
 .login__container--register a {
     text-decoration: none;
     font-size: var(--highlight-font-size);
-    color: var(--text-color);    
+    color: var(--text-color);
+    font-weight: bold;    
 }
 
 .login__container--register a:hover {
