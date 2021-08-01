@@ -1,0 +1,171 @@
+/*Theme*/
+:root {
+    --header-color: #21C08B;
+    --footer-color: #AB88FF; 
+    --text-color: #FFFFFF;
+    --basic-font-size: 1.6rem; 
+    --profile-font-size: 1.5rem;
+    --title-font-size: 2.4rem;
+    --highlight-font-size: 1.8rem;
+    --small-font-size: 1.2rem;
+}
+
+/*Base*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(var(--header-color),var(--footer-color));
+    height: 100vh;
+}
+
+/*Header layout*/
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+}
+
+header figure {
+    position: relative;
+}
+
+header img {
+    height: 100%;
+    width: 100%;
+    min-width: 81px;
+}
+
+/*login layout*/
+.login {
+    height: 80vh;
+}
+
+.login__container {
+    height: calc(80vh - 40px);
+    width: 80%;
+    margin: 20px 10%;
+    border: 2px solid var(--text-color);
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(254,254,254,0.1);
+}
+
+.login__container > h2 {
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+    margin: 10px 0 10px 10%;
+    text-align:left;
+    width: 100%;
+    align-self: center;
+}
+
+/*login__container--form*/
+.login__container--form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.login__container--form > * {
+    width: 80%;
+}
+
+.input {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--text-color);
+    border-left: 0;
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    outline: none;
+    height: 30px;
+    transition: 300ms all;
+    border-radius: 20px;
+}
+
+.input:focus {
+    background: rgba(254,254,254,0.2);
+}
+
+.input::placeholder {
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+}
+
+.login__container--form > input[type='submit'] {
+    background: rgba(254,254,254,0.3);
+    transition: 300ms all;
+    border: none;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    height: 40px;
+    font-size: var(--highlight-font-size);
+}
+
+.login__container--form > input[type='submit']:hover {
+    background:rgba(254,254,254,0.5);
+}
+
+/*login__container--register*/
+.login__container--register {
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+    margin: 5px 0;
+    align-self: center;
+}
+
+.login__container--register a {
+    text-decoration: none;
+    font-size: var(--highlight-font-size);
+    color: var(--text-color);
+    font-weight: bold;    
+}
+
+.login__container--register a:hover {
+    text-decoration: underline;
+}
+
+/*Footer layout*/
+footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: var(--basic-font-size);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
