@@ -7,6 +7,7 @@
     --profile-font-size: 1.5rem;
     --title-font-size: 2.4rem;
     --highlight-font-size: 1.8rem;
+    --small-font-size: 1.2rem;
 }
 
 /*Base*/
@@ -46,7 +47,7 @@ header img {
     min-width: 81px;
 }
 
-/*form layout*/
+/*login layout*/
 .login {
     height: 80vh;
 }
@@ -55,8 +56,8 @@ header img {
     height: calc(80vh - 40px);
     width: 80%;
     margin: 20px 10%;
-    border: solid var(--text-color);
-    border-radius: 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,10 +68,12 @@ header img {
     color: var(--text-color);
     font-size: var(--basic-font-size);
     margin: 10px 0 10px 10%;
-    text-align: left;
+    text-align:left;
     width: 100%;
+    align-self: center;
 }
 
+/*login__container--form*/
 .login__container--form {
     display: flex;
     justify-content: center;
@@ -81,18 +84,72 @@ header img {
     width: 80%;
 }
 
+/*login__container--remember*/
+.login__container--remember {
+    font-size: var(--small-font-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.login__container--remember input {
+    margin-right: 5px;
+}
+
+.login__container--remember a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.login__container--remember a:hover {
+    text-decoration: underline;
+}
+
+/*login__conteiner--social-media*/
+.login__container--social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login__container--social-media > * {
+    width: 80%;
+    font-size: var(--basic-font-size);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+.media {
+    height: 25px;
+}
+
+.media > img {
+    height: 100%;
+    margin-right: 5px;
+}
+
+/*login__container--register*/
 .login__container--register {
     width: 100%;
     text-align: center;
     color: var(--text-color);
     font-size: var(--basic-font-size);
     margin: 5px 0;
+    align-self: center;
 }
 
 .login__container--register a {
     text-decoration: none;
     font-size: var(--highlight-font-size);
     color: var(--text-color);    
+}
+
+.login__container--register a:hover {
+    text-decoration: underline;
 }
 
 /*Footer layout*/
@@ -110,4 +167,8 @@ footer {
 footer a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
