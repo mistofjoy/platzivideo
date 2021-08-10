@@ -1,0 +1,99 @@
+/*Theme*/
+:root {
+    --header-color: #21C08B;
+    --footer-color: #AB88FF; 
+    --text-color: #FFFFFF;
+    --basic-font-size: 1.6rem; 
+    --profile-font-size: 1.5rem;
+    --title-font-size: 2.4rem;
+    --highlight-font-size: 1.8rem;
+    --small-font-size: 1.2rem;
+    --giant-font-size: 5rem;
+}
+
+/*Base*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(var(--header-color),var(--footer-color));
+    height: 100vh;
+}
+
+/*Header layout*/
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+}
+
+header figure {
+    position: relative;
+}
+
+header img {
+    height: 100%;
+    width: 100%;
+    min-width: 81px;
+}
+
+/*Error 404 not found*/
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    color: var(--text-color);
+    font-size: var(--giant-font-size);
+}
+
+.error p {
+    color: var(--text-color);
+    font-size: var(--basic-font-size);
+}
+
+/*Footer layout*/
+footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: var(--basic-font-size);
+    text-align: center;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
